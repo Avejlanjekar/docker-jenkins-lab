@@ -33,5 +33,11 @@ pipeline{
                 }
             }
         }
+
+        stage ('docker push'){
+            steps{
+                sh 'docker push avejlanjekar45/jenkins-docker-lab'
+            }
+        }
     }
 }
