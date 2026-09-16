@@ -6,5 +6,11 @@ pipeline{
                 checkout scm
             }
         }
+
+        stage ('Docker build'){
+            steps{
+                sh "docker build -t docker-jenkins-lab ."
+            }
+        }
     }
 }
